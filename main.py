@@ -77,7 +77,7 @@ if picture:
     img = img / 255
     img = Normalize(img.mean([1, 2]), img.std([1, 2]))(img)
 
-    layers = [(IMG_SIZE ** 2) * NUM_CHANNELS, 4000, 1500, NUM_CATEGORIES]
+    layers = [(IMG_SIZE ** 2) * NUM_CHANNELS, 4000, 2000, NUM_CATEGORIES]
     cnn_layers = [NUM_CHANNELS, 100, 150, 250]
     cnn_kernels = [5, 3, 3]
     model = Net(layers, cnn_layers, cnn_kernels, IMG_SIZE)
