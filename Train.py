@@ -35,7 +35,7 @@ criterion = nn.CrossEntropyLoss()
 train_loader = DataLoader(dataset=train_dataset, batch_size=20, shuffle=True)
 validation_loader = DataLoader(dataset=validation_dataset, batch_size=30, shuffle=False)
 
-layers = [input_dim, 4000, 1500, output_dim]
+layers = [input_dim, 4000, 2000, output_dim]
 cnn_layers = [NUM_CHANNELS, 100, 150, 250]
 cnn_kernels = [5, 3, 3]
 model = Net(layers, cnn_layers, cnn_kernels, IMG_SIZE)
